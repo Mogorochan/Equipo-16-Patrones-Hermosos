@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--RUTA DE LA HOJA DE ESTILOS-->
+      <link rel="stylesheet" href="./style.css"> 
+      <title>ProyectoEquipo16</title>
+  </head>
+  <body id="body-family">
+    <main>
+      <!--TITULO-->
+      <div class="main-title">
+        <h1>¡La Contaminación en Latinoamérica!</h1>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+      </div>
+
+      <!--INICIO DE LA CIUDAD 1 Natalia-->
+      <!--TEXTO 1-->
+      <div class="title-ecociudad">
+          <h2>Eco ciudad</h2>
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+      </div>
+
+      <!--TEXTO 1.1-->
+      <div class="parrafo-ecociudad">
+        <p>Llegar a ser una ciudad verde en realidad no es tan complejo como se piensa. Eso sí, se necesita del esfuerzo de todos, sobretodo, a la hora de pedir <br/> 
+          a los gobiernos verdaderas políticas de control y sanción a las empresas contaminantes. Para más información, véase:  <br/> 
+       </p>
+          <a href="https://www.youtube.com/watch?v=p1EJBEn3HuQ&ab_channel=EnPocasPalabras%E2%80%93Kurzgesagt">¿Es demasiado tarde para frenar el cambio climático? </a>
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+      </div>
+
+      <!--FONDO DE LA CIUDAD 1-->
+      <canvas width="600" height="600" id="proyecto"></canvas>
+      <script src="canvas.js"></script>
+      <!--Banco de imágenes-->
+      <img src="img/pecesD.png" id="pecesRight" style="position:absolute;top:900px;left:100px;width:100px">
+      <img src="img/pecesI.png" id="pecesL" style="position:absolute;top:920px;left:400px;width:100px">
+      <img src="img/biker.png" id="bikerA" style="position:absolute;top:760px;left:100px;width:120px">
+      <img src="img/ciclistaH.png" id="Ciclista-hombre" style="position:absolute;top:780px;left:400px;width:120px">
+      <img src="img/ciclistaM.png" id="Ciclista-mujer" style="position:absolute;top:680px;left:210px;width:90px">
+      <img src="img/patinador.png" id="Patinadors" style="position:absolute;top:675px;left:510px;width:70px">
+      <img src="img/skater.png" id="Skaters" style="position:absolute;top:675px;left:810px;width:60px">
+      <img src="img/couple.png" id="couples" style="position:absolute;top:780px;left:700px;width:260px">
+      <!--Biker-->
+      <script>
+        var biker = document.getElementById('bikerA');
+        var unidad_tiempoBiker = 100;
+        var distanciaBiker = 10;
+        var posicionBiker = 170;
+
+        setInterval(function moto(){
+
+          if (posicionBiker > 1350 || posicionBiker < 170) {
+                posicionBiker = 170;
+          }
+          posicionBiker = posicionBiker + distanciaBiker;
+          biker.style.left = posicionBiker + 'px';
+        },unidad_tiempoBiker);
+      </script>
+      <!--Ciclistas-->
+      <script>
+        var ciclistaM = document.getElementById('Ciclista-mujer');
+        var unidad_tiempoCM = 150;
+        var distanciaCM = 10;
+        var posicionCM = 210;
+
+        setInterval(function ciclisM(){
+
+          if (posicionCM > 1350 || posicionCM < 210) {
+                posicionCM = 210;
+          }
+          posicionCM = posicionCM + distanciaCM;
+          ciclistaM.style.left = posicionCM + 'px';
+        },unidad_tiempoCM);
+      </script>
+      <script>
+        var ciclistaH = document.getElementById('Ciclista-hombre');
+        var unidad_tiempoCH = 150;
+        var distanciaCH = 10;
+        var posicionCH = 400;
+
+        setInterval(function ciclisH(){
+
+          if (posicionCH > 1350 || posicionCH < 400) {
+                posicionCH = 400;
+          }
+          posicionCH = posicionCH + distanciaCH;
+          ciclistaH.style.left = posicionCH + 'px';
+        },unidad_tiempoCH);
+      </script>
+        <!--Skaters-->
+      <script>
+        var patinador = document.getElementById('Patinadors');
+        var unidad_tiempoPT = 200;
+        var distanciaPT = 10;
+        var posicionPT = 510;
+  
+        setInterval(function patinadors(){
+  
+          if (posicionPT > 1350 || posicionPT < 510) {
+                posicionPT = 510;
+          }
+          posicionPT = posicionPT + distanciaPT;
+          patinador.style.left = posicionPT + 'px';
+        },unidad_tiempoPT);
+      </script>
+      <script>
+        var skater = document.getElementById('Skaters');
+        var unidad_tiempoSK = 200;
+        var distanciaSK = 10;
+        var posicionSK = 810;
+  
+        setInterval(function Skater(){
+  
+          if (posicionSK > 1350 || posicionSK < 810) {
+                posicionSK = 810;
+          }
+          posicionSK = posicionSK + distanciaSK;
+          skater.style.left = posicionSK + 'px';
+        },unidad_tiempoSK);
+      </script>
+       <!--Couples-->
+       <script>
+        var couple = document.getElementById('couples');
+        var unidad_tiempoC = 150;
+        var distanciaC = 10;
+        var posicionC = 700;
+
+        setInterval(function copl(){
+
+          if (posicionC > 1260 || posicionC < 700) {
+                posicionC = 700;
+          }
+          posicionC = posicionC + distanciaC;
+          couple.style.left = posicionC + 'px';
+        },unidad_tiempoC);
+      </script>
+       <!--Peces-->
+      <script>
+        var pecesD = document.getElementById('pecesRight');
+        var unidad_tiempo = 250;
+        var distancia = 10;
+        var posicion = 100;
+
+        setInterval(function peces(){
+
+          if (posicion > 1350 || posicion < 100) {
+                posicion = 100;
+          }
+          posicion = posicion + distancia;
+          pecesD.style.left = posicion + 'px';
+        },unidad_tiempo);
+      </script>
+      <script>
+            var pecesI = document.getElementById('pecesL');
+            var unidad_tiempoI = 250;
+            var distanciaI = 10;
+            var posicionI = 400;
+    
+            setInterval(function pecesIzquie(){
+    
+              if (posicionI > 1350 || posicionI < 400) {
+                    posicionI = 400;
+              }
+              posicionI = posicionI + distanciaI;
+              pecesI.style.left = posicionI + 'px';
+            },unidad_tiempoI);
+      </script>
+
+      <!--INICIO DE LA CIUDAD 2 KRISTHEL-->
+      <!--TEXTO 2-->
+      <div class="title-city">
+        <h2>Ciudad Contaminada</h2>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+      </div>
+
+      <!--TEXTO 2.1-->
+      <div class="parrafo-city">
+        <p>Las sequías, el cambio climático, la falta de tratamiento de los desechos de las aguas residuales, la contaminación por parte de los humanos, los derrames de petróleo y el vertido de desechos industriales y de metales pesados en las aguas son las principales causas de contaminación en América Latina. </p>
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+      </div>
+
+      <!--FONDO DE LA CIUDAD 2-->
+      <div id="Ciudad2" title="CIUDAD2">
+        <div class="fondo-city"></div>
+      </div>
+
+      <!--CIUDAD CONTAMINADA-->
+      <div id="Ciudad-casas" title="CIUDAD-CASAS">
+        <figure>
+          <a class="ciudad"> <img src="Ciudad.png" alt="Ciudad Contaminada"/></a>
+        </figure>
+      </div>
+
+      <!--VEREDA-->
+      <div id="VEREDA" title="VEREDA">
+        <div class="RectanguloBlanco"></div>
+        <div class="RectanguloBlanco1"></div>
+        <div class="RectanguloBlanco2"></div>
+        <div class="RectanguloBlanco3"></div>
+        <div class="RectanguloBlanco4"></div>
+        <div class="RectanguloBlanco5"></div>
+        <div class="RectanguloBlanco6"></div>
+        <div class="RectanguloBlanco7"></div>
+        <div class="RectanguloBlanco8"></div>
+        <div class="RectanguloBlanco9"></div>
+        <div class="RectanguloBlanco10"></div>
+        <div class="RectanguloBlanco11"></div>
+        <div class="RectanguloBlanco12"></div>
+        <div class="RectanguloBlanco13"></div>
+        <div class="RectanguloBlanco14"></div>
+        <div class="RectanguloBlanco15"></div>
+        <div class="RectanguloBlanco16"></div>
+        <div class="RectanguloBlanco17"></div>
+        <div class="RectanguloBlanco18"></div>
+        <div class="RectanguloBlanco19"></div>
+        <div class="RectanguloBlanco20"></div>
+        <div class="RectanguloBlanco21"></div>
+        <div class="RectanguloBlanco22"></div>
+        <div class="RectanguloBlanco23"></div>
+        <div class="RectanguloBlanco24"></div>
+        <div class="RectanguloBlanco25"></div>
+        <div class="RectanguloBlanco26"></div>
+        <div class="RectanguloBlanco27"></div>
+        <div class="RectanguloBlanco28"></div>
+        <div class="RectanguloBlanco29"></div>
+      </div>
+
+      <!--CALLE-->
+      <div id="CALLE" title="CALLE">
+        <div class="Asfalto"></div>
+        <div class="LineasAmarillas"></div>
+        <div class="LineasAmarillas1"></div>
+        <div class="LineaBlanca"></div>
+        <div class="LineaBlanca1"></div>
+        <div class="LineaBlanca2"></div>
+        <div class="LineaBlanca3"></div>
+        <div class="LineaBlanca4"></div>
+        <div class="LineaBlanca5"></div>
+        <div class="LineaBlanca6"></div>
+        <div class="LineaBlanca7"></div>
+        <div class="LineaBlanca8"></div>
+        <div class="LineaBlanca9"></div>
+        <div class="LineaBlanca10"></div>
+        <div class="LineaBlanca11"></div>
+        <div class="LineaBlanca12"></div>
+        <div class="LineaBlanca13"></div>
+        <div class="LineaBlanca14"></div>
+        <div class="LineaBlanca15"></div>
+        <div class="LineaBlanca16"></div>
+        <div class="LineaBlanca17"></div>
+        <div class="LineaBlanca18"></div>
+        <div class="LineaBlanca19"></div>
+        <div class="LineaBlanca20"></div>
+        <div class="LineaBlanca21"></div>
+        <div class="LineaBlanca22"></div>
+        <div class="LineaBlanca23"></div>
+      </div>
+
+      <!--VARANDA-->
+      <div id="VARANDA" title="VARANDA">
+        <figure>
+          <a class="varanda"> <img src="Varanda.png" alt="Varanda"/> </a>
+        </figure>
+      </div>
+      
+      <!--RIO-->
+      <div id="RIO" title="RIO">
+        <figure>
+          <a class="rio"> <img src="Rio.png" alt="Rio"/> </a>
+        </figure>
+      </div>
+      
+      <!--PERSONAS-->
+      <div id="Personas" title="PERSONAS">
+        <figure>
+          <a class="chica"> <img src="Chica.png" alt="chica"/> </a>
+          <a class="chico"> <img src="Chico.png" alt="Chico"/> </a>
+          <a class="senores"> <img src="Srs.png" alt="senores"/> </a>
+          <a class="Chica-nina"> <img src="Chica-nina.png" alt="Chica-nina"/> </a>
+          <a class="senor"> <img src="Sr.png" alt="senor"/> </a>
+        </figure>
+      </div>
+
+      <!--NUBES ESTATICAS-->
+      <div id="NUBES-ESTATICAS" title="NUBES-ESTATICAS">
+        <figure>
+          <a class="NUBE1"> <img src="Nube1.png" alt="NUBE1"/> </a>
+          <a class="NUBE2"> <img src="Nube2.png" alt="NUBE2"/> </a>
+          <a class="NUBE3"> <img src="Nube3.png" alt="NUBE3"/> </a>
+          <a class="NUBE4"> <img src="Nube4.png" alt="NUBE4"/> </a>
+          <a class="NUBE5"> <img src="Nube5.png" alt="NUBE5"/> </a>
+          <a class="NUBE6"> <img src="Nube6.png" alt="NUBE6"/> </a>
+          <a class="NUBE7"> <img src="Nube5.png" alt="NUBE7"/> </a>
+          <a class="NUBE8"> <img src="Nube4.png" alt="NUBE8"/> </a>
+        </figure>
+      </div>
+
+      <!--NUBES MOVIMIENTO-->
+      <div id="BlackCloud1" title="BlackCloud">
+        <div class="Black_Circle1 "></div>
+        <div class="Black_Oval "></div>
+        <div class="Black_Circle2 "></div>
+        <div class="Black_Rectangle1 "></div>
+      </div>
+
+      <div id="GreyCloud1" title="GreyCloud">
+        <div class="Grey_Circle1 "></div>
+        <div class="Grey_Circle2 "></div>
+        <div class="Grey_Circle3 "></div>
+        <div class="Grey_Rectangle1 "></div>
+      </div>
+
+      <div id="TwoCloud" title="TwoCloud">
+        <div class="Grey_Circle4 "></div>
+        <div class="Grey_Circle5 "></div>
+        <div class="Grey_Circle6 "></div>
+        <div class="Grey_Rectangle2 "></div>
+        <div class="Black_Circle3 "></div>
+        <div class="Black_Circle4 "></div>
+        <div class="Black_Circle5 "></div>
+        <div class="Black_Rectangle2 "></div>
+      </div>
+
+      <div id="OneCloud" title="OneCloud">
+        <div class="Grey_Circle7 "></div>
+        <div class="Grey_Circle8 "></div>
+        <div class="Grey_Circle9 "></div>
+        <div class="Grey_Rectangle3 "></div>
+      </div>
+
+      <!--MOVIMIENTO NUBES-->
+      <script>
+        var velocity_nube1=2.5;
+        var position_nube1=40;
+        var NUBE1=document.getElementById('BlackCloud1');
+        
+        setInterval(function(){
+          if (position_nube1 > 1200 || position_nube1 < 40) {
+            velocity_nube1=-1*velocity_nube1;
+          }
+          position_nube1 = position_nube1+velocity_nube1;
+          NUBE1.style.left=position_nube1+'px';
+        },100);
+      </script>
+
+      <script>
+        var velocity_nube2=2.5;
+        var position_nube2=60;
+        var NUBE2=document.getElementById('GreyCloud1');
+        
+        setInterval(function(){
+          if (position_nube2 > 1220 || position_nube2 < 60) {
+            velocity_nube2=-1*velocity_nube2;
+          }
+          position_nube2 = position_nube2+velocity_nube2;
+          NUBE2.style.left=position_nube2+'px';
+        },100);
+      </script>
+
+      <script>
+        var velocity_nube3=2.5;
+        var position_nube3=40;
+        var NUBE3=document.getElementById('TwoCloud');
+        
+        setInterval(function(){
+          if (position_nube3 > 1200 || position_nube3 < 40) {
+            velocity_nube3=-1*velocity_nube3;
+          }
+          position_nube3 = position_nube3+velocity_nube3;
+          NUBE3.style.left=position_nube3+'px';
+        },100);
+      </script>
+
+      <script>
+        var velocity_nube4=2.5;
+        var position_nube4=20;
+        var NUBE4=document.getElementById('OneCloud');
+        
+        setInterval(function(){
+          if (position_nube4 > 1180 || position_nube4 < 20) {
+            velocity_nube4=-1*velocity_nube4;
+          }
+          position_nube4 = position_nube4+velocity_nube4;
+          NUBE4.style.left=position_nube4+'px';
+        },100);
+      </script>
+      
+      <!--CARROS, CAMION Y VOLQUETA-->
+      <div>
+        <div id="AutoRojo" title="AutoRojo">
+          <a class="AutoRojo"> <img src="AutoRojo.png"alt="AutoRojo"/> </a>
+        </div>
+      </div>
+
+      <div>
+        <div id="CamionTala" title="CamionTala">
+          <a class="CamionTala"> <img src="CamionTala.png"alt="CamionTala"/> </a>
+        </div>
+      </div>
+
+      <div>
+        <div id="CarroAzul" title="CarroAzul">
+          <a class="CarroAzul"> <img src="CarroAzul.png"alt="CarroAzul"/> </a>
+        </div>
+      </div>
+
+      <div>
+        <div id="BusEscolar" title="BusEscolar">
+          <a class="BusEscolar"> <img src="BusEscolar.png"alt="BusEscolar"/> </a>
+        </div>
+      </div>
+
+      <div>
+        <div id="Volqueta" title="Volqueta">
+          <a class="Volqueta"> <img src="Volqueta.png"alt="Volqueta"/> </a>
+        </div>
+      </div>
+
+      <!--MOVIMIENTO AUTO ROJO-->
+      <script>
+        var velocity_autorojo=7;
+        var position_autorojo=100;
+        var AutoRojo=document.getElementById('AutoRojo');
+        setInterval(function(){
+          if (position_autorojo > 695 || position_autorojo < 100) {
+            position_autorojo=100; 
+          }
+          position_autorojo = position_autorojo+velocity_autorojo;
+          AutoRojo.style.left=position_autorojo+'px';
+        },100);
+      </script>
+
+      <!--MOVIMIENTO CAMION TALA-->
+      <script>
+        var velocity_camiontala=7;
+        var position_camiontala=20;
+        var CamionTala=document.getElementById('CamionTala');
+        setInterval(function(){
+          if (position_camiontala > 610 || position_camiontala < 20) {
+            position_camiontala=20; 
+          }
+          position_camiontala = position_camiontala+velocity_camiontala;
+          CamionTala.style.left=position_camiontala+'px';
+        },100);
+      </script>
+
+      <!--MOVIMIENTO BUS ESCOLAR-->
+      <script>
+        var velocity_busescolar=4.5;
+        var position_busescolar=25;
+        var BusEscolar=document.getElementById('BusEscolar');
+        setInterval(function(){
+          if (position_busescolar > 405 || position_busescolar < 25) {
+            position_busescolar=25; 
+          }
+          position_busescolar = position_busescolar+velocity_busescolar;
+          BusEscolar.style.left=position_busescolar+'px';
+        },100);
+      </script>
+
+      <!--MOVIMIENTO CARRO AZUL-->
+      <script>
+        var velocity_carroazul=4.5;
+        var position_carroazul=20;
+        var CarroAzul=document.getElementById('CarroAzul');
+        setInterval(function(){
+          if (position_carroazul > 400 || position_carroazul < 20) {
+            position_carroazul=20; 
+          }
+          position_carroazul = position_carroazul+velocity_carroazul;
+          CarroAzul.style.left=position_carroazul+'px';
+        },100);
+      </script>
+
+      <!--MOVIMIENTO VOLQUETA-->
+      <script>
+        var velocity_volqueta=4.5;
+        var position_volqueta=20;
+        var Volqueta=document.getElementById('Volqueta');
+        setInterval(function(){
+          if (position_volqueta > 400 || position_volqueta < 20) {
+            position_volqueta=20; 
+          }
+          position_volqueta = position_volqueta+velocity_volqueta;
+          Volqueta.style.left=position_volqueta+'px';
+        },100);
+      </script>
+
+      
+      <!--BASURA-->
+      <div id="BASURA-RIO" title="BASURA-RIO">
+        <figure>
+          <a class="BASURA1"> <img src="Basura1.png"alt="BASURA1"/> </a>
+          <a class="BASURA2"> <img src="Basura2.png"alt="BASURA2"/> </a>
+          <a class="BASURA3"> <img src="Basura3.png"alt="BASURA3"/> </a>
+          <a class="BASURA4"> <img src="Basura4.png"alt="BASURA4"/> </a>
+          <a class="BASURA5"> <img src="Basura5.png"alt="BASURA5"/> </a>
+          <a class="BASURA6"> <img src="Basura6.png"alt="BASURA6"/> </a>
+          <a class="BASURA7"> <img src="Basura7.png"alt="BASURA7"/> </a>
+          <a class="BASURA8"> <img src="Basura8.png"alt="BASURA8"/> </a>
+          <a class="BASURA9"> <img src="Basura9.png"alt="BASURA9"/> </a>
+          <a class="BASURA10"> <img src="Basura10.png"alt="BASURA10"/> </a>
+          <a class="BASURA11"> <img src="Basura11.png"alt="BASURA11"/> </a>
+        </figure>
+      </div>
+
+      <!--MOVIMIENTO BASURA-->
+      <!--MOVIMIENTO BASURA 1-->
+      <script>
+        var velocity_basura=1;
+        var position_basura=35;
+        var Basura=document.getElementById('BASURA-RIO');
+        
+        setInterval(function(){
+          if (position_basura > 125 || position_basura < 35) {
+            position_basura=35; 
+          }
+          position_basura = position_basura+velocity_basura;
+          Basura.style.left=position_basura+'px';
+        },100);
+      </script>
+
+      <!--FIN DE LA CIUDAD 2-->
+      
+    </main>
+  </body>
+</html>
